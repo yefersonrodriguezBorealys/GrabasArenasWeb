@@ -1,0 +1,290 @@
+
+  <header class="bg-white shadow py-4 sticky top-0 z-50">
+    <div class="flex flex-row justify-between items-center mx-[160px] mx-4 md:mx-10 lg:mx-[160px]">
+    <!-- LOGO -->
+    <div class="flex items-center">
+      <img src="assets/images/Logo.svg"  class="h-[62px]" />
+    </div>
+
+    <!-- MENÚ -->
+    <nav class="hidden md:flex space-x-6 font-medium text-gray-600">
+      <a href="#"  class="hover:text-orange-500 font-poppins font-semibold">INICIO</a>
+      <a href="#" class="hover:text-orange-500 font-poppins font-semibold">QUIÉNES SOMOS</a>
+      <a href="#" class="hover:text-orange-500 font-poppins font-semibold">POR QUÉ PREFERIRNOS</a>
+      <a href="#" class="hover:text-orange-500 font-poppins font-semibold">CONTÁCTANOS</a>
+    </nav>
+
+    <!-- BOTÓN -->
+    <div class="flex items-center space-x-4 block hidden md:flex">
+      <button class=" bg-orange-500 hover:bg-orange-600 text-white   text-lg px-6 py-2 rounded-md font-poppins font-semibold">
+        INICIAR SESIÓN
+      </button>
+    </div>
+
+     <button  (click)="toggleMenu()" id="menu-toggle" class="block md:hidden flex flex-col space-y-2" >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+     </button>
+
+    </div>
+
+    <div [class.hidden]="isMenuHidden" id="mobile-menu" class="md:hidden">
+        <nav class="flex flex-col space-y-4 px-4 py-2">
+             <a href="#"  class="hover:text-orange-500 font-poppins font-semibold">INICIO</a>
+             <a href="#" class="hover:text-orange-500 font-poppins font-semibold">QUIÉNES SOMOS</a>
+             <a href="#" class="hover:text-orange-500 font-poppins font-semibold">POR QUÉ PREFERIRNOS</a>
+             <a href="#" class="hover:text-orange-500 font-poppins font-semibold">CONTÁCTANOS</a>
+             <div>
+                <button class=" bg-orange-500 hover:bg-orange-600 text-white   text-lg px-6 py-2 rounded-md font-poppins font-semibold flex flex-col space-y-2 pt-2 border-t mt-2">
+                    INICIAR SESIÓN
+                </button>
+             </div>
+        </nav>
+        
+    </div>
+  </header>
+
+
+<section
+  class="relative bg-cover bg-center h-screen flex items-center"
+  style="background-image: url('assets/images/Grupo24.png')"
+>
+  <!-- Capa oscura para mejorar contraste -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <div class="mx-4 md:mx-10 lg:mx-[160px]">
+    <div class="flex flex-col space-y-6 max-w-xl">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        EXPERIENCIA<br />
+        <span class="text-orange-500">INFRAESTRUCTURA</span><br />
+        Y CONOCIMIENTO
+      </h1>
+    
+      <div>
+      <button
+        class="bg-orange-500 hover:bg-orange-600 text-white   text-lg px-6 py-2 rounded-md font-poppins font-semibold"
+      >
+        CONTÁCTENOS
+      </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 flex flex-col md:flex-row items-center gap-12 mx-4 md:mx-10 lg:mx-[160px]">
+    <!-- Título -->
+    <div class="flex-1 flex flex-col items-start space-y-6">
+      <h2 class="flex items-center gap-4 text-[38px] font-bold uppercase text-gray-800">
+        <img src="assets/logos/Polígono.svg" alt="icono" class="w-8 h-8" />
+        ¿Quiénes somos?
+      </h2>
+      <img src="assets/images/Enmascarargrupo3.png" alt="excavadora" class="w-full md:ml-16 object-contain" />
+    </div>
+    <!-- Contenido -->
+    <div class="flex-1 flex flex-col space-y-6">
+      <!-- Video y texto -->
+      <div class="w-full max-w-[1920px] mx-auto relative pt-[56.25%] rounded-xl shadow">
+        <!-- Video simulado (puedes reemplazarlo por iframe o <video>) -->
+        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/_Ju44KvkarU?si=XKSF_p4R9s3ex2dD" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+       </div>
+        <!-- Descripción -->
+        <p class="text-sm text-gray-600 leading-relaxed  text-center text-[20px] font-poppins"  >
+          Empresa 100% antioqueña, que nace a través de una alianza estratégica entre
+          <strong class="font-semibold text-gray-600 text-[20px]  font-poppins ">expertos de la industria de la construcción</strong>.
+          Gracias a esto, nuestra empresa tiene la
+          <strong class="font-semibold text-gray-600 text-[20px] font-poppins">experiencia, la infraestructura y el conocimiento</strong>
+          para brindarle a sus clientes, productos de la
+          <strong class="font-semibold text-gray-600 text-[20px] font-poppins">mejor calidad y al mejor precio</strong>.
+        </p>
+
+        <!-- Botón -->
+        <button class="mx-auto bg-orange-500 hover:bg-orange-600 text-white   text-lg px-6 py-2 rounded-md font-poppins font-semibold ">
+          CONTÁCTENOS
+        </button>
+      
+    </div>
+</section>
+
+
+<section class="py-16 mx-4 md:mx-10 lg:mx-[160px]">
+  <div class="flex flex-col items-start space-y-4 mb-6 relative">
+    <div class="flex items-center space-x-3">
+      <img src="assets/logos/Polígono.svg" alt="icono" class="w-8 h-8" />
+      <h2 class="flex items-center gap-4 text-[38px] font-bold uppercase text-gray-800">
+        ¿Por qué preferirnos?
+      </h2>
+    </div>
+
+    <!-- Botones arriba -->
+    <div class="absolute right-0 top-0 flex space-x-2">
+      <button (click)="prev()" class="bg-amber-700 text-white p-2 rounded">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <button (click)="next()" class="bg-amber-700 text-white p-2 rounded">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Carrusel -->
+<!-- Carrusel -->
+<!-- Carrusel -->
+<div class="overflow-hidden w-full">
+  <div
+    class="transition-transform duration-500 ease-in-out"
+    [style.transform]="'translateX(-' + currentSlide * 100 + '%)'"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      @for (card of cards.slice(currentSlide * 4, currentSlide * 4 + 4); track card) {
+        <div class="flex flex-col rounded-lg overflow-hidden shadow-md bg-white">
+          <div class="relative w-full h-[220px] overflow-hidden">
+            <img
+              [src]="card.img"
+              alt="imagen"
+              
+            />
+            <div class="absolute top-4 left-4 bg-orange-700 rounded-full p-2 z-10">
+              <img [src]="card.img" alt="icono" class="w-6 h-6" />
+            </div>
+          </div>
+          <div class="bg-amber-700 text-white p-4 text-sm font-medium w-full">
+            {{ card.text }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+
+<section class="py-16 mx-4 md:mx-10 lg:mx-[160px]">
+  <div class="flex flex-col items-start space-y-4 mb-6 relative">
+    <div class="flex items-center space-x-3 mb-10"> <img src="assets/logos/Polígono.svg" alt="icono" class="w-8 h-8" />
+      <h2 class="flex items-center gap-4 text-[38px] font-bold uppercase text-gray-800">
+        Contáctenos
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-7 text-center">
+      <div>
+        <div class="flex justify-center mb-6">
+          <img src="assets/logos/Iconfa-solid-phone.svg" alt="Teléfono" class="w-12 h-12" style="filter: brightness(0.6) sepia(1) hue-rotate(-20deg) saturate(3);" />
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg shadow-sm h-full flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-gray-900 text-[28px] mb-1">Número de Teléfono</h3>
+            <p class="text-gray-900 text-base text-[20px]">(604) 322 - 88 - 70</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-center mb-6">
+          <img src="assets/logos/sobre.svg" alt="Correo" class="w-12 h-12" style="filter: brightness(0.6) sepia(1) hue-rotate(-20deg) saturate(3);" />
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm h-full flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-gray-900 text-[28px] mb-1">Correo Electrónico</h3>
+            <p class="text-gray-900 text-base text-[20px]">ventas@gravasyarenascauca.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-center mb-6">
+          <img src="assets/logos/Iconfa-solid-location-dot.svg" alt="Ubicación" class="w-12 h-12" style="filter: brightness(0.6) sepia(1) hue-rotate(-20deg) saturate(3);" />
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm h-full flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-gray-900 text-[28px] mb-1">Ubicación</h3>
+            <p class="text-gray-900 text-base text-center text-[20px]">
+              <strong class="font-semibold">Dirección Planta:</strong> Km 11 Vía Santa Fe de Antioquia – Bolombolo.<br />
+              <strong class="font-semibold">Dirección Administrativa:</strong> Calle 20B Sur # 37A 90. Medellín, Antioquia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 mx-4 md:mx-10 lg:mx-[160px] relative z-10">
+  
+    <form class="bg-gray-100 p-6 rounded-lg shadow-md space-y-4">
+        <h2 class="text-center text-[38px] font-bold text-orange-800 mb-6">
+            ¿Necesitas una cotización o tienes alguna duda? Estamos aquí para ayudarte.
+        </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input
+          type="text"
+          placeholder="Nombres"
+          class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+        <input
+          type="text"
+          placeholder="Apellidos"
+          class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+        <input
+          type="tel"
+          placeholder="Número de Teléfono"
+          class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+        <input
+          type="email"
+          placeholder="Correo Electrónico"
+          class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+      </div>
+
+      <input
+        type="text"
+        placeholder="Asunto: Tipo de Solicitud (cotización, soporte, etc.)"
+        class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+      />
+
+      <textarea
+        rows="4"
+        placeholder="Cuéntanos los detalles de tu solicitud"
+        class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+      ></textarea>
+
+      <div class="text-right">
+        <button
+          type="submit"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-2 rounded"
+        >
+          SOLICITAR INFORMACIÓN
+        </button>
+      </div>
+    </form>
+</section>
+
+<div class="w-full">
+  <div class="-mt-40"> <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.372558661793!2d-75.59023479999999!3d6.2198006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44284144078657%3A0xb119a0a1a0b3a3d!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1722557438407!5m2!1ses!2sco"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
+

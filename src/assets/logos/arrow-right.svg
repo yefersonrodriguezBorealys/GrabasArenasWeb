@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cc7a35;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_29" data-name="Grupo 29" transform="translate(-1576)">
+    <rect id="Rectángulo_24" data-name="Rectángulo 24" class="cls-1" width="54" height="54" rx="11" transform="translate(1576)"/>
+    <path id="Icon_ion-arrow-left-b" data-name="Icon ion-arrow-left-b" class="cls-2" d="M24.929,6.987l-.172.147L11.96,18.255a2.069,2.069,0,0,0-.7,1.57,2.1,2.1,0,0,0,.7,1.57L24.733,32.508l.213.188a1.263,1.263,0,0,0,.711.221,1.326,1.326,0,0,0,1.292-1.357V8.107A1.326,1.326,0,0,0,25.657,6.75,1.249,1.249,0,0,0,24.929,6.987Z" transform="translate(1624.004 46.917) rotate(180)"/>
+  </g>
+</svg>

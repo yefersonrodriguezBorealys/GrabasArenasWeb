@@ -13,11 +13,10 @@ export class Header {
   cardsToShow = 4;
 
   cards = [
-  { img: 'assets/images/excavadorapesada.jpg', text: 'Utilizamos maquinaria de última generación...' },
-  { img: 'assets/images/trabajadormasculino.jpg', text: 'Empleamos estrictos procesos de supervisión...' },
-  { img: 'assets/images/NormaEtica.jpg', text: 'Nuestros productos obedecen a la norma NTC...' },
-  { img: 'assets/images/PreciosCalidad.jpg', text: 'Ofrecemos precios competitivos y calidad...' },
-  { img: 'assets/img5.jpg', text: 'Otra razón para preferirnos...' }
+  { img: 'assets/images/excavadorapesada.jpg', text: 'Innovamos e invertimos en infraestructura continuamente para estar a la vanguardia de la industria de los agregados.', icon: 'assets/logos/excavador.svg' },
+  { img: 'assets/images/trabajadormasculino.jpg', text: 'Tenemos la experiencia, el conocimiento y la solidez, para garantizar a nuestros el suministro continuo y estable de nuestros productos, manteniendo siempre los más altos estándares de calidad. ', icon: 'assets/logos/excavador.svg' },
+  { img: 'assets/images/NormaEtica.jpg', text: 'Estamos comprometidos con la sostenibilidad, invertimos en energías limpias, recuperación de ecosistemas e inversión social. ', icon: 'assets/logos/excavador.svg' },
+  { img: 'assets/images/PreciosCalidad.jpg', text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.', icon: 'assets/logos/excavador.svg' }
 ];
   
   get totalSlides(): number {
@@ -41,3 +40,4 @@ prev() {
 }
 
 }
+import { AfterViewInit, Component } from '@angular/core';

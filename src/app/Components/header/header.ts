@@ -19,6 +19,20 @@ export class Header {
   { img: 'assets/images/PreciosCalidad.jpg', text: 'Ofrecemos precios competitivos y calidad...' },
   { img: 'assets/img5.jpg', text: 'Otra razón para preferirnos...' }
 ];
+
+  constructor() {
+    this.updateCardsToShow();
+    window.addEventListener('resize', this.updateCardsToShow.bind(this));
+  }
+
+  updateCardsToShow() {
+    const width = window.innerWidth;
+    if (width < 640) {
+      this.cardsToShow = 1; // Mobile
+    } else {
+      this.cardsToShow = 4; // Desktop
+    }
+  }
   
   get totalSlides(): number {
     return Math.ceil(this.cards.length / this.cardsToShow);
@@ -29,15 +43,27 @@ export class Header {
   }
 
   get maxSlide() {
-  return Math.max(0, this.cards.length - this.cardsToShow);
+  return this.totalSlides - 1;
 }
 
 next() {
-  if (this.currentSlide < this.maxSlide) this.currentSlide++;
+  this.currentSlide = (this.currentSlide + 1) > this.maxSlide ? 0 : this.currentSlide + 1;
 }
 
 prev() {
-  if (this.currentSlide > 0) this.currentSlide--;
+  this.currentSlide = (this.currentSlide - 1) < 0 ? this.maxSlide : this.currentSlide - 1;
 }
+
+get visibleCards() {
+    const start = this.currentSlide * this.cardsToShow;
+    let visible = this.cards.slice(start, start + this.cardsToShow);
+
+    if (visible.length < this.cardsToShow) {
+      const remaining = this.cardsToShow - visible.length;
+      visible = visible.concat(this.cards.slice(0, remaining));
+    }
+
+    return visible;
+  }
 
 }

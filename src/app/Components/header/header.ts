@@ -13,10 +13,11 @@ export class Header {
   cardsToShow = 4;
 
   cards = [
-  { img: 'assets/images/excavadorapesada.jpg', text: 'Innovamos e invertimos en infraestructura continuamente para estar a la vanguardia de la industria de los agregados.', icon: 'assets/logos/excavador.svg' },
-  { img: 'assets/images/trabajadormasculino.jpg', text: 'Tenemos la experiencia, el conocimiento y la solidez, para garantizar a nuestros el suministro continuo y estable de nuestros productos, manteniendo siempre los más altos estándares de calidad. ', icon: 'assets/logos/excavador.svg' },
-  { img: 'assets/images/NormaEtica.jpg', text: 'Estamos comprometidos con la sostenibilidad, invertimos en energías limpias, recuperación de ecosistemas e inversión social. ', icon: 'assets/logos/excavador.svg' },
-  { img: 'assets/images/PreciosCalidad.jpg', text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.', icon: 'assets/logos/excavador.svg' }
+  { img: 'assets/images/foto_2.jpg', text: 'Innovamos e invertimos en infraestructura continuamente para estar a la vanguardia de la industria de los agregados.', icon: 'assets/logos/excavador.svg' },
+  { img: 'assets/images/foto_3.JPG', text: 'Tenemos la experiencia, el conocimiento y la solidez, para garantizar a nuestros el suministro continuo y estable de nuestros productos, manteniendo siempre los más altos estándares de calidad. ', icon: 'assets/logos/insignia.svg' },
+  { img: 'assets/images/foto_6.png', text: 'Estamos comprometidos con la sostenibilidad, invertimos en energías limpias, recuperación de ecosistemas e inversión social. ', icon: 'assets/logos/verificacion-de-escudo.svg' },
+  { img: 'assets/images/foto_4.JPG', text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.', icon: 'assets/logos/garantia.svg' },
+  { img: 'assets/images/foto_4.JPG', text: 'Entregamos nuestros productos donde el cliente lo requiera, de manera oportuna y segura, por medio de nuestra empresa aliada de transporte.', icon: 'verificacion-de-escudo.svg' }
 ];
   
   get totalSlides(): number {
@@ -40,4 +41,3 @@ prev() {
 }
 
 }
-import { AfterViewInit, Component } from '@angular/core';

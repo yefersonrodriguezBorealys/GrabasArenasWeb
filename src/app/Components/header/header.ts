@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { NgClass, NgFor, NgIf } from '@angular/common';
+=======
+import {AfterViewInit, Component } from '@angular/core';
+>>>>>>> ef999b10e3e1f6c8cb9b5d8176986d3b5fc2eec4
 
 @Component({
   selector: 'app-header',
@@ -88,6 +92,7 @@ export class Header {
     this.touchStartX = event.changedTouches[0].screenX;
   }
 
+<<<<<<< HEAD
   onTouchEnd(event: TouchEvent) {
     this.touchEndX = event.changedTouches[0].screenX;
     this.handleSwipeGesture();
@@ -105,3 +110,7 @@ export class Header {
     }
   }
 }
+=======
+}
+
+>>>>>>> ef999b10e3e1f6c8cb9b5d8176986d3b5fc2eec4

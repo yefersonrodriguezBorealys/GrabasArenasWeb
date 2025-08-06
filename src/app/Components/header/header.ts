@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +16,7 @@ export class Header {
   { img: 'assets/images/excavadorapesada.jpg', text: 'Innovamos e invertimos en infraestructura continuamente para estar a la vanguardia de la industria de los agregados.', icon: 'assets/logos/excavador.svg' },
   { img: 'assets/images/trabajadormasculino.jpg', text: 'Tenemos la experiencia, el conocimiento y la solidez, para garantizar a nuestros el suministro continuo y estable de nuestros productos, manteniendo siempre los más altos estándares de calidad. ', icon: 'assets/logos/excavador.svg' },
   { img: 'assets/images/NormaEtica.jpg', text: 'Estamos comprometidos con la sostenibilidad, invertimos en energías limpias, recuperación de ecosistemas e inversión social. ', icon: 'assets/logos/excavador.svg' },
+  { img: 'assets/images/PreciosCalidad.jpg', text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.', icon: 'assets/logos/excavador.svg' },
   { img: 'assets/images/PreciosCalidad.jpg', text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.', icon: 'assets/logos/excavador.svg' }
 ];
 
@@ -66,4 +67,4 @@ get visibleCards() {
   }
 
 }
-import { AfterViewInit, Component } from '@angular/core';
+

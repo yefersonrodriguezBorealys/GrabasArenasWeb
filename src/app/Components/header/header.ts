@@ -1,24 +1,49 @@
 import { Component } from '@angular/core';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: true,
+  imports: [NgClass, NgFor, NgIf],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
 export class Header {
-
   isMenuHidden = true;
-  currentSlide = 0;
+
+  startIndex = 0;
   cardsToShow = 4;
 
+  touchStartX = 0;
+  touchEndX = 0;
+
   cards = [
-  { img: 'assets/images/foto_2.jpg', text: 'Innovamos e invertimos en infraestructura continuamente para estar a la vanguardia de la industria de los agregados.', icon: 'assets/logos/excavador.svg' },
-  { img: 'assets/images/foto_3.JPG', text: 'Tenemos la experiencia, el conocimiento y la solidez, para garantizar a nuestros el suministro continuo y estable de nuestros productos, manteniendo siempre los más altos estándares de calidad. ', icon: 'assets/logos/insignia.svg' },
-  { img: 'assets/images/foto_6.png', text: 'Estamos comprometidos con la sostenibilidad, invertimos en energías limpias, recuperación de ecosistemas e inversión social. ', icon: 'assets/logos/verificacion-de-escudo.svg' },
-  { img: 'assets/images/foto_4.JPG', text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.', icon: 'assets/logos/garantia.svg' },
-  { img: 'assets/images/foto_4.JPG', text: 'Entregamos nuestros productos donde el cliente lo requiera, de manera oportuna y segura, por medio de nuestra empresa aliada de transporte.', icon: 'verificacion-de-escudo.svg' }
-];
+    {
+      img: 'assets/images/foto_2.jpg',
+      text: 'Innovamos e invertimos en infraestructura continuamente para estar a la vanguardia de la industria de los agregados.',
+      icon: 'assets/logos/excavador.svg'
+    },
+    {
+      img: 'assets/images/foto_3.JPG',
+      text: 'Tenemos la experiencia, el conocimiento y la solidez, para garantizar a nuestros el suministro continuo y estable de nuestros productos, manteniendo siempre los más altos estándares de calidad.',
+      icon: 'assets/logos/insignia.svg'
+    },
+    {
+      img: 'assets/images/foto_6.png',
+      text: 'Estamos comprometidos con la sostenibilidad, invertimos en energías limpias, recuperación de ecosistemas e inversión social.',
+      icon: 'assets/logos/verificacion-de-escudo.svg'
+    },
+    {
+      img: 'assets/images/foto_4.JPG',
+      text: 'Ofrecemos precios altamente competitivos y material de excelente calidad.',
+      icon: 'assets/logos/garantia.svg'
+    },
+    {
+      img: 'assets/images/Foto_5.jpg',
+      text: 'Entregamos nuestros productos donde el cliente lo requiera, de manera oportuna y segura, por medio de nuestra empresa aliada de transporte.',
+      icon: 'assets/logos/verificacion-de-escudo.svg'
+    }
+  ];
 
   constructor() {
     this.updateCardsToShow();
@@ -27,43 +52,56 @@ export class Header {
 
   updateCardsToShow() {
     const width = window.innerWidth;
+
     if (width < 640) {
-      this.cardsToShow = 1; // Mobile
+      this.cardsToShow = 1;
+    } else if (width < 1024) {
+      this.cardsToShow = 2;
     } else {
-      this.cardsToShow = 4; // Desktop
+      this.cardsToShow = 4;
     }
   }
-  
-  get totalSlides(): number {
-    return Math.ceil(this.cards.length / this.cardsToShow);
+
+  get visibleCards() {
+    const visible: any[] = [];
+    for (let i = 0; i < this.cardsToShow; i++) {
+      const index = (this.startIndex + i) % this.cards.length;
+      visible.push(this.cards[index]);
+    }
+    return visible;
+  }
+
+  next() {
+    this.startIndex = (this.startIndex + 1) % this.cards.length;
+  }
+
+  prev() {
+    this.startIndex = (this.startIndex - 1 + this.cards.length) % this.cards.length;
   }
 
   toggleMenu() {
     this.isMenuHidden = !this.isMenuHidden;
   }
 
-  get maxSlide() {
-  return this.totalSlides - 1;
-}
-
-next() {
-  this.currentSlide = (this.currentSlide + 1) > this.maxSlide ? 0 : this.currentSlide + 1;
-}
-
-prev() {
-  this.currentSlide = (this.currentSlide - 1) < 0 ? this.maxSlide : this.currentSlide - 1;
-}
-
-get visibleCards() {
-    const start = this.currentSlide * this.cardsToShow;
-    let visible = this.cards.slice(start, start + this.cardsToShow);
-
-    if (visible.length < this.cardsToShow) {
-      const remaining = this.cardsToShow - visible.length;
-      visible = visible.concat(this.cards.slice(0, remaining));
-    }
-
-    return visible;
+  // 👇 Eventos táctiles para swipe
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.changedTouches[0].screenX;
   }
 
+  onTouchEnd(event: TouchEvent) {
+    this.touchEndX = event.changedTouches[0].screenX;
+    this.handleSwipeGesture();
+  }
+
+  handleSwipeGesture() {
+    const deltaX = this.touchEndX - this.touchStartX;
+
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        this.prev(); // Desliza a la derecha → ir hacia atrás
+      } else {
+        this.next(); // Desliza a la izquierda → ir hacia adelante
+      }
+    }
+  }
 }

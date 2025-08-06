@@ -121,108 +121,138 @@
 </section>
 
 
-<section class="py-16  max-w-screen-xl mx-auto px-6 sm:px-8 md:px-4">
-  <div class="flex flex-col items-start space-y-4 mb-6 relative">
-    <div class="flex items-center space-x-3">
+<section class="py-16 max-w-screen-xl mx-auto px-6 sm:px-8 md:px-4">
+  <!-- Título y botones (solo escritorio) -->
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 relative">
+    <!-- Icono + Título -->
+    <div class="flex items-center space-x-3 mb-4 md:mb-0">
       <img src="assets/logos/Polígono.svg" alt="icono" class="w-8 h-8" />
-      <h2 class="flex items-center gap-4 text-[38px] uppercase text-gray-600 font-patua">
-        ¿Por qué preferirnos?
-      </h2>
+      <h2 class="text-[38px] uppercase text-gray-600 font-patua">¿Por qué preferirnos?</h2>
     </div>
 
-    <img src="data:image/png;base64,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" alt="imagen"/>
-
-    <!-- Botones arriba -->
-    <div class="absolute right-0 top-0 flex space-x-4">
-      <button (click)="prev()" class="">
+    <!-- Flechas solo escritorio -->
+    <div class="hidden md:flex space-x-4">
+      <button (click)="prev()">
         <img src="assets/logos/arrow-left.svg" alt="Flecha izquierda" class="w-12 h-12" />
       </button>
-      <button (click)="next()" class="">
-         <img src="assets/logos/arrow-right.svg" alt="Flecha derecha" class="w-12 h-12" />
+      <button (click)="next()">
+        <img src="assets/logos/arrow-right.svg" alt="Flecha derecha" class="w-12 h-12" />
       </button>
     </div>
   </div>
 
-  <!-- Carrusel -->
-<!-- Carrusel -->
-<!-- Carrusel -->
-<div class="overflow-hidden w-full">
-  <div class="transition-transform duration-500 ease-in-out">
-    <div
-      class="grid gap-6"
-      [class.grid-cols-1]="cardsToShow === 1"
-      [class.grid-cols-4]="cardsToShow === 4"
-    >
+  <!-- Carrusel fijo sin scroll táctil -->
+  <div class="w-full">
+    <div class="flex transition-transform duration-500 ease-in-out">
       @for (card of visibleCards; track card) {
-        <div class="flex flex-col rounded-lg overflow-hidden shadow-md bg-white">
-          <div class="relative w-full h-[180px] sm:h-[220px] overflow-hidden">
-            <img [src]="card.img" alt="imagen"  class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute top-4 left-4 bg-orange-700 rounded-full p-2 z-10">
-              <img [src]="card.img" alt="icono" class="w-6 h-6" />
+        <div
+          class="px-2"
+          [ngClass]="{
+            'w-full': cardsToShow === 1,
+            'w-1/2': cardsToShow === 2,
+            'w-1/4': cardsToShow === 4
+          }"
+        >
+          <!-- Tarjeta -->
+          <div class="flex flex-col rounded-lg overflow-hidden shadow-md bg-white h-full">
+            <!-- Imagen -->
+            <div class="relative w-full h-[250px] sm:h-[260px] md:h-[250px] overflow-hidden">
+              <img
+                [src]="card.img"
+                alt="imagen"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <!-- Icono: más grande en escritorio, más pequeño en móvil -->
+              <div class="absolute top-4 left-4 bg-orange-700 rounded-full p-2 sm:p-3 md:p-4 z-10 flex items-center justify-center">
+                <img [src]="card.icon" alt="icono" class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+              </div>
+
+              <!-- Texto adicional solo para foto_3.JPG -->
+              <div
+                *ngIf="card.img.includes('foto_3.JPG')"
+                class="absolute bottom-0 left-0 w-full bg-black/70 text-white text-sm sm:text-base font-poppins font-bold text-center py-2 z-10"
+              >
+                MÁS DE 10 AÑOS EN EL MERCADO
+              </div>
             </div>
-          </div>
-          <div class="bg-[#CC7A35] text-[15px] text-white leading-relaxed text-center font-poppins font-medium p-5 h-60 flex items-center justify-center">
-            {{ card.text }}
+
+            <!-- Texto -->
+            <div
+              class="bg-[#CC7A35] text-white leading-relaxed text-center font-poppins font-medium p-5 h-60 flex items-center justify-center"
+            >
+              {{ card.text }}
+            </div>
           </div>
         </div>
       }
     </div>
   </div>
 
-</div>
-
+  <!-- Flechas móviles abajo -->
+  <div class="flex justify-center space-x-4 mt-6 md:hidden">
+    <button (click)="prev()">
+      <img src="assets/logos/arrow-left.svg" alt="Flecha izquierda" class="w-10 h-10" />
+    </button>
+    <button (click)="next()">
+      <img src="assets/logos/arrow-right.svg" alt="Flecha derecha" class="w-10 h-10" />
+    </button>
+  </div>
 </section>
+
+
+
 
 <section class="py-16 max-w-screen-xl mx-auto px-6 sm:px-8 md:px-4">
-  <div class="flex flex-col items-start space-y-4 mb-6 relative">
-    <div class="flex items-center space-x-3 mb-10"> <img src="assets/logos/Polígono.svg" alt="icono" class="w-8 h-8" />
-      <h2 class="flex items-center gap-4 text-[38px] uppercase text-gray-600 font-patua">
-        Contáctenos
-      </h2>
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 text-center">
-  <div class="px-3">
-    <div class="flex justify-center mb-6">
-      <img src="assets/logos/Iconfa-solid-phone.svg" alt="Teléfono" class="w-20 h-20 " />
-    </div>
-    <div class="bg-[#F2F2F2] p-4 rounded-lg shadow-sm h-60 flex flex-col justify-center">
-      <div>
-        <h3 class="font-bold font-poppins text-[#444444] text-[28px] mb-1">Número de Teléfono</h3>
-        <p class="font-poppins text-[#444444] text-[16px]">(604) 322 - 88 - 70</p>
+    <!-- Teléfono -->
+    <div class="px-3">
+      <div class="flex justify-center mb-6">
+        <img src="assets/logos/Iconfa-solid-phone.svg" alt="Teléfono" class="w-20 h-20" />
+      </div>
+      <div class="bg-[#F2F2F2] p-6 rounded-lg shadow-sm min-h-[260px] flex flex-col justify-center">
+        <div>
+          <h3 class="font-bold font-poppins text-[#444444] text-[24px] md:text-[28px] mb-2">Número de Teléfono</h3>
+          <p class="font-poppins text-[#444444] text-[16px]">(604) 322 - 88 - 70</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="px-3">
-    <div class="flex justify-center mb-6 pt-8 sm:pt-0">
-      <img src="assets/logos/sobre.svg" alt="Correo" class="w-20 h-20" />
-    </div>
-    <div class="bg-[#F2F2F2] p-4 rounded-lg shadow-sm h-60 flex flex-col justify-center">
-      <div>
-        <h3 class="font-bold font-poppins text-[#444444] text-[28px] mb-1">Correo Electrónico</h3>
-        <p class="font-poppins text-[#444444] text-[16px]">ventas@gravasyarenascauca.com</p>
+    <!-- Correo -->
+    <div class="px-3">
+      <div class="flex justify-center mb-6">
+        <img src="assets/logos/sobre.svg" alt="Correo" class="w-20 h-20" />
+      </div>
+      <div class="bg-[#F2F2F2] p-6 rounded-lg shadow-sm min-h-[260px] flex flex-col justify-center">
+        <div>
+          <h3 class="font-bold font-poppins text-[#444444] text-[24px] md:text-[28px] mb-2">Correo Electrónico</h3>
+          <p class="font-poppins text-[#444444] text-[16px] break-words">
+            ventas@gravasyarenascauca.com
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="px-3">
-    <div class="flex justify-center mb-6 pt-8 sm:pt-0">
-      <img src="assets/logos/Iconfa-solid-location-dot.svg" alt="Ubicación" class="w-20 h-20" />
-    </div>
-    <div class="bg-[#F2F2F2] p-4 rounded-lg shadow-sm h-60 flex flex-col justify-center">
-      <div>
-        <h3 class="font-bold font-poppins text-[#444444] text-[28px] mb-1">Ubicación</h3>
-        <p class="font-medium font-poppins text-[#444444] text-center text-[16px]">
-          <strong>Dirección Planta:</strong> Km 11 Vía Santa Fe de Antioquia – Bolombolo.<br />
-          <strong>Dirección Administrativa:</strong> Calle 20B Sur # 37A 90. Medellín, Antioquia.
-        </p>
+    <!-- Ubicación -->
+    <div class="px-3">
+      <div class="flex justify-center mb-6">
+        <img src="assets/logos/Iconfa-solid-location-dot.svg" alt="Ubicación" class="w-20 h-20" />
+      </div>
+      <div class="bg-[#F2F2F2] p-6 rounded-lg shadow-sm min-h-[260px] flex flex-col justify-center">
+        <div>
+          <h3 class="font-bold font-poppins text-[#444444] text-[24px] md:text-[28px] mb-2">Ubicación</h3>
+          <p class="font-medium font-poppins text-[#444444] text-[16px]">
+            <strong>Dirección Planta:</strong> Km 11 Vía Santa Fe de Antioquia – Bolombolo.<br />
+            <strong>Dirección Administrativa:</strong> Calle 20B Sur # 37A 90. Medellín, Antioquia.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
   </div>
 </section>
+
 <section class="py-16  relative z-10 max-w-screen-xl mx-auto">
   
     <form class="bg-gray-100 p-6 rounded-lg shadow-md space-y-4">
